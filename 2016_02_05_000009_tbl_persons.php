@@ -19,10 +19,10 @@ class TblPersons extends Migration {
 			$table->integer("course_id")->unsigned()->nullable();
 			$table->foreign("course_id")->references("id")->on("course")->onDelete("set null");
 			$table->string("firstname", 15);
-			$table->string("middlename", 15);
+			$table->string("middlename", 15)->nullable();
 			$table->string("lastname", 15);
 			$table->string("gender", 10);
-			$table->string("email", 40);
+			$table->string("email", 40)->unique();
 			$table->string("photo");		
 			$table->timestamps();
 		});
