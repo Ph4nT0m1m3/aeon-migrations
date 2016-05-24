@@ -1,5 +1,5 @@
 <?php
-
+//To be added later
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
