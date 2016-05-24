@@ -16,8 +16,7 @@ class TblSchedules extends Migration {
 		{
 			$table->increments('id');
 			$table->string("name", 25);
-			$table->integer("element_id")->unsigned()->nullable();
-			$table->foreign("element_id")->references("id")->on("elements")->onDelete("cascade");
+			$table->text("description");
 			$table->timestamps();
 		});
 	}

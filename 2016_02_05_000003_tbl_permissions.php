@@ -16,7 +16,7 @@ class TblPermissions extends Migration {
 		{
 			$table->increments('id');
 			$table->string("permission", 80);
-			$table->string("description", 500)->nullable();
+			$table->text("description")->nullable();
 			$table->timestamps();
 		});
 	}

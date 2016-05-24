@@ -23,7 +23,7 @@ class TblClasses extends Migration {
 			$table->foreign("subject_id")->references("id")->on("subjects")->onDelete("cascade");
 			$table->integer("room_id")->unsigned()->nullable();
 			$table->foreign("room_id")->references("id")->on("rooms")->onDelete("cascade");
-			$table->string("remarks")->nullable();
+			$table->text("remarks")->nullable();
 			$table->timestamps();
 		});
 	}

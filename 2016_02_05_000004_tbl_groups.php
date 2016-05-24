@@ -16,7 +16,7 @@ class TblGroups extends Migration {
 		{
 			$table->increments('id');
 			$table->string("group", 40);
-			$table->string("description", 200)->nullable();
+			$table->text("description")->nullable();
 			$table->timestamps();
 		});
 	}

@@ -15,6 +15,8 @@ class TblScheduleElement extends Migration {
 		Schema::create('elements', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->integer("schedule_id")->unsigned()->nullable();
+			$table->foreign("schedule_id")->references("id")->on("schedules")->onDelete("cascade");
 			$table->integer("class_id")->unsigned()->nullable();
 			$table->foreign("class_id")->references("id")->on("classes")->onDelete("cascade");
 			$table->integer("day_id")->unsigned()->nullable();

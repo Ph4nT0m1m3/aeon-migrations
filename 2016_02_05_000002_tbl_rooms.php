@@ -16,7 +16,7 @@ class TblRooms extends Migration {
 		{
 			$table->increments('id');
 			$table->string("room", 20);
-			$table->string("description", 100)->nullable();
+			$table->text("description")->nullable();
 			$table->timestamps();
 		});
 	}
