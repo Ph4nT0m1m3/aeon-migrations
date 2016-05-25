@@ -17,7 +17,7 @@ class TblPersons extends Migration {
 			$table->increments('id');
 			$table->integer("identification_code")->nullable()->unique();
 			$table->integer("course_id")->unsigned()->nullable();
-			$table->foreign("course_id")->references("id")->on("course")->onDelete("set null");
+			$table->foreign("course_id")->references("id")->on("courses")->onDelete("set null");
 			$table->string("firstname", 15);
 			$table->string("middlename", 15)->nullable();
 			$table->string("lastname", 15);

@@ -16,7 +16,7 @@ class TblPivotGrpperm extends Migration {
 		{
 			$table->increments('id');
 			$table->integer("permission_id")->unsigned()->nullable();
-			$table->foreign("permission_id")->references("id")->on("permission")->onDelete("cascade");
+			$table->foreign("permission_id")->references("id")->on("permissions")->onDelete("cascade");
 			$table->integer("group_id")->unsigned()->nullable();
 			$table->foreign("group_id")->references("id")->on("groups")->onDelete("cascade");
 			$table->timestamps();
