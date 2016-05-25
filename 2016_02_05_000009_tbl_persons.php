@@ -23,7 +23,7 @@ class TblPersons extends Migration {
 			$table->string("lastname", 15);
 			$table->string("gender", 10);
 			$table->string("email", 40)->unique();
-			$table->string("photo");		
+			$table->string("photo")->default("default.png")->nullable();		
 			$table->timestamps();
 		});
 	}
