@@ -17,7 +17,7 @@ class TblCourses extends Migration {
 			$table->increments('id');
 			$table->string("course_short", 10);
 			$table->string("course_long", 150);
-			$table->string("course_major", 150);
+			$table->string("course_major", 150)->nullable();
 			$table->integer("level")->default(1)->nullable();
 			$table->timestamps();
 		});
