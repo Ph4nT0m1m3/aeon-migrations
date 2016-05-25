@@ -19,6 +19,7 @@ class TblSubjects extends Migration {
 			$table->string("description", 100)->nullable();
 			$table->integer("prerequisite")->unsigned()->nullable();
 			$table->foreign("prerequisite")->references("id")->on("subjects")->onDelete("cascade");
+			$table->integer("units");
 			$table->timestamps();
 		});
 	}

@@ -21,6 +21,8 @@ class TblScheduleElement extends Migration {
 			$table->foreign("class_id")->references("id")->on("classes")->onDelete("cascade");
 			$table->integer("day_id")->unsigned()->nullable();
 			$table->foreign("day_id")->references("id")->on("days")->onDelete("cascade");
+			$table->time("time_in");
+			$table->time("time_out");
 			$table->timestamps();
 		});
 	}
