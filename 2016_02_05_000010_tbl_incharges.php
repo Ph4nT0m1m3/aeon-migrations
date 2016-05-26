@@ -15,7 +15,7 @@ class TblIncharges extends Migration {
 		Schema::create('asssignees', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer("person_id")->unsigned()->nullable();
+			$table->integer("person_id")->unsigned()->nullable()->unique();
 			$table->foreign("person_id")->references("id")->on("persons")->onDelete("set null");
 			$table->timestamps();
 		});

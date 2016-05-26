@@ -15,7 +15,7 @@ class TblComments extends Migration
         Schema::create("comments", function(Blueprint $table)
         {
             $table->increments('id');
-            $table->integer("user_id")->unsigned()->nullable()->unique();
+            $table->integer("user_id")->unsigned()->nullable();
             $table->foreign("user_id")->references("id")->on("users")->onDelete("cascade");
             $table->integer("schedule_id")->unsigned()->nullable();
             $table->foreign("schedule_id")->references("id")->on("schedules")->onDelete("cascade");
