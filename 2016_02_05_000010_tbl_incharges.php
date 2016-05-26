@@ -12,7 +12,7 @@ class TblIncharges extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('asssignees', function(Blueprint $table)
+		Schema::create('assignees', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->integer("person_id")->unsigned()->nullable()->unique();
